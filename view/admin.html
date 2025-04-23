@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - Manage Products and Categories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/login" id="login-link">Login</a></li>
+                  <li><a href="/account" id="account-link" class="hidden">Account</a></li>
+                  <li><a href="/admin" id="admin-link" class="hidden">Admin Panel</a></li>
+                  <li><span id="user-display">Welcome, guest</span></li>
+                  <li><button id="logout-btn" class="hidden">Logout</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Admin Panel</h1>
+
+        <section class="section">
+            <h2>Add Category</h2>
+            <form id="add-category-form">
+                <label for="category-name">Category Name:</label>
+                <input type="text" id="category-name" name="name" required>
+                <button type="submit">Add Category</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <h2>Update Category</h2>
+            <form id="update-category-form">
+                <label for="update-category-id">Select Category:</label>
+                <select id="update-category-id" name="catid" required></select>
+                <label for="update-category-name">New Category Name:</label>
+                <input type="text" id="update-category-name" name="name">
+                <button type="submit">Update Category</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <h2>Delete Category</h2>
+            <form id="delete-category-form">
+                <label for="delete-category-id">Select Category:</label>
+                <select id="delete-category-id" name="catid" required></select>
+                <button type="submit">Delete Category</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <h2>Add Product</h2>
+            <form id="add-product-form" enctype="multipart/form-data">
+                <label for="category">Category:</label>
+                <select id="category" name="catid" required></select>
+                <label for="product-name">Product Name:</label>
+                <input type="text" id="product-name" name="name" required>
+                <label for="price">Price:</label>
+                <input type="number" id="price" name="price" step="0.01" min="0" required>
+                <label for="description">Description:</label>
+                <textarea id="description" name="description" required></textarea>
+                <label for="image">Upload Image:</label>
+                <input type="file" id="image" name="image" accept="image/jpeg, image/png, image/gif" required>
+                <button type="submit">Add Product</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <h2>Update Product</h2>
+            <form id="update-product-form" enctype="multipart/form-data">
+                <label for="update-product-id">Select Product:</label>
+                <select id="update-product-id" name="pid" required></select>
+                <label for="update-category">Category:</label>
+                <select id="update-category" name="catid"></select>
+                <label for="update-product-name">Product Name:</label>
+                <input type="text" id="update-product-name" name="name">
+                <label for="update-price">Price:</label>
+                <input type="number" id="update-price" name="price" step="0.01" min="0">
+                <label for="update-description">Description:</label>
+                <textarea id="update-description" name="description"></textarea>
+                <label for="update-image">Upload Image:</label>
+                <input type="file" id="update-image" name="image" accept="image/jpeg, image/png, image/gif">
+                <button type="submit">Update Product</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <h2>Delete Product</h2>
+            <form id="delete-product-form">
+                <label for="delete-product-id">Select Product:</label>
+                <select id="delete-product-id" name="pid" required></select>
+                <button type="submit">Delete Product</button>
+            </form>
+        </section>
+        
+        <section class="section">
+            <h2>Manage Orders</h2>
+            <table id="orders-table">
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>User ID</th>
+                        <th>Total</th>
+                        <th>Currency</th>
+                        <th>Status</th>
+                        <th>Created At</th>
+                        <th>Products</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-table-body">
+                </tbody>
+            </table>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>2025 Dummy Book Shop</p>
+    </footer>
+
+    <script src="admin.js"></script>
+</body>
+</html>
