@@ -1,0 +1,450 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Shopping list summary and details */
+.shopping-list {
+    position: fixed;
+    top: 10px;
+    right: 20px; 
+    width: 350px; 
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px; 
+    z-index: 1000;
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shopping-list:hover {
+    max-height: 600px; 
+}
+
+.shopping-list-summary {
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.shopping-list-details {
+    display: none;
+}
+
+.shopping-list:hover .shopping-list-details {
+    display: block;
+}
+
+.shopping-list-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; 
+}
+
+.shopping-list-details li {
+    margin-bottom: 15px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px; 
+    gap: 10px; 
+}
+
+.shopping-list-details .product-name {
+    flex: 1; 
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.shopping-list-details input[type="number"] {
+    width: 60px; 
+    margin: 0 5px;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.shopping-list-details button {
+    padding: 5px 10px; 
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 12px;
+}
+
+.shopping-list-details button:hover {
+    background: #555;
+}
+
+.shopping-list-details .product-price {
+    font-weight: bold; 
+    min-width: 60px; 
+    text-align: right; 
+}
+
+/* Main content area */
+main {
+    padding: 20px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+/* Sidebar with categories */
+.sidebar {
+    width: 250px;
+    float: left;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-right: 1px solid #ccc;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.5em;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.sidebar ul li a:hover {
+    background-color: #f0c040;
+    color: #fff;
+}
+
+/* Breadcrumb navigation */
+.breadcrumb {
+    margin-bottom: 20px;
+    font-size: 14px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #f0c040;
+}
+
+.breadcrumb span {
+    color: #999;
+}
+
+/* Main content section */
+.main-content {
+    margin-left: 270px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+/* Product List Styles */
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-item {
+    border: 1px solid #ddd;
+    margin: 10px;
+    padding: 20px;
+    background: #fff;
+    flex: 1 1 200px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-item img.product-image-small {
+    max-width: 150px;
+    height: auto;
+}
+
+/* Product Detail Page Styles */
+.product-details {
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-details img.product-image-large {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product-details h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-details p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+.product-details button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-details button:hover {
+    background: #555;
+}
+
+.product-details input[type="number"] {
+    width: 60px;
+    padding: 6px;
+    margin-right: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 5px;
+    background: #1a1a1a;
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 30px;
+    line-height: 0px;
+    z-index: 999;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Admin panel Styles */
+.section {
+    margin-bottom: 7rem; 
+}
+
+/* Additional styles to replace inline CSS */
+.hidden {
+    display: none;
+}
+
+/* Ensure consistency for buttons in product items */
+.product-item button {
+    padding: 10px 20px;
+    font-size: 14px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-item button:hover {
+    background: #555;
+}
+
+
+/* Navigation Styles */
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #f0c040;
+}
+
+/* Class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* for the user email */
+#user-display {
+    color: #333; 
+    font-weight: bold; 
+    font-size: 16px; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    background-color: #fff; 
+}
+
+/* For thr table in admin panel*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+table ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+table ul li {
+    margin-bottom: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        float: none;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .shopping-list {
+        top: 70px; 
+        right: 10px;
+        width: 250px; 
+        max-height: 40px; 
+    }
+
+    .shopping-list:hover {
+        max-height: 400px;
+    }
+
+    .shopping-list-details li {
+        font-size: 12px; 
+    }
+
+    .shopping-list-details input[type="number"] {
+        width: 50px; /
+    }
+
+    .shopping-list-details button {
+        padding: 4px 8px; 
+        font-size: 10px;
+    }
+
+    .shopping-list-details .product-price {
+        min-width: 50px; 
+    }
+}
+
+/*Password and signin*/
+.valid {
+    color: green;
+}
+
+.invalid {
+    color: red;
+}
+
+#password-requirements {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#password-requirements ul {
+    margin: 0.5rem 0 0 1rem;
+    padding: 0;
+}
+

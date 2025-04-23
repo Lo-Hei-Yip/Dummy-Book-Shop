@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dummy Book Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="shopping-list">
+        <div class="shopping-list-summary">
+            Shopping List (Total: $<span id="cart-total">0</span>)
+        </div>
+        <div class="shopping-list-details">
+            <form id="cart-form">
+                <input type="hidden" name="_csrf" id="csrf-token">
+                <input type="hidden" name="invoice" id="invoice">
+                <input type="hidden" name="custom" id="custom">
+                <ul id="cart-items"></ul>
+                <button type="submit" id="checkout-btn">Checkout</button>
+            </form>  
+        </div>
+    </div>
+    
+    <main class="content">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/login" id="login-link">Login</a></li>
+                    <li><a href="/account" id="account-link" class="hidden">Account</a></li>
+                    <li><a href="/admin" id="admin-link" class="hidden">Admin Panel</a></li>
+                    <li><span id="user-display">Welcome, guest</span></li>
+                    <li><button id="logout-btn" class="hidden">Logout</button></li>
+                </ul>
+            </nav>
+        </header>
+
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul id="category-list"></ul>
+        </aside>
+
+        <section class="main-content">
+            <nav class="breadcrumb" id="breadcrumb">
+                <a href="index.html" id="home-link">Home</a>
+            </nav>
+
+            <h1 id="page-title">Welcome to the BOOKS!</h1>
+        
+            <h2 id="category-title" class="hidden">All Books</h2>
+            <section id="product-list" class="product-list"></section>
+
+            <section id="product-details" class="product-details hidden">
+                <h2 id="product-details-title">Product Details</h2>
+                <div id="product-details-content"></div>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+        <p>2025 Dummy Book Shop</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</body>
+</html>
