@@ -1,4 +1,5 @@
-#Dummy-Book-Shop
+# Dummy Book Shop
+
 This is a Dummy-Book-Shop created by Lo Hei Yip
 
 This website include 3 category: fiction, non-fiction, comic books. 
