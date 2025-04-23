@@ -1,6 +1,6 @@
 # Dummy Book Shop
 
-This is a Dummy-Book-Shop created by Lo Hei Yip
+This is the source code for Dummy-Book-Shop created by Lo Hei Yip
 
 This website include 3 category: fiction, non-fiction, comic books. 
 Each with 4 dummy products 
