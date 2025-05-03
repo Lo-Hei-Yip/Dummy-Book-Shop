@@ -6,7 +6,7 @@ This website run until the end of June in 2025.
 
 This website includes 3 categories: fiction, non-fiction and comic-books. Each with 4 dummy products 
 
-This website includes functions of: a side bar of categories, hierarchical navigation menu, shopping cart, payment system using stripe, login and registration system, admin panel for checking all orders and modifying products or categories contents, member panel for changing passwords
+This website includes functions of: a side bar of categories, hierarchical navigation menu, shopping cart, payment system using stripe, login and registration system, admin panel for checking all orders and modifying products or categories contents, member panel for changing passwords, plug in facebook module
 
 Main Page of the website
 ![image](https://github.com/user-attachments/assets/89363f9a-f67e-48d0-b9eb-c192f9398e15)
